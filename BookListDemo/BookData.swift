@@ -9,21 +9,21 @@
 import Foundation
 
 struct BookData {
-    static func getBooks() -> [BookViewModel]? {
-        var books: [BookViewModel] = []
+    static func getBooks() -> [Book] {
+        var books: [Book] = []
         guard let path = Bundle.main.path(forResource: "books", ofType: "json") else {
             print("Missing file: books.json")
-            return nil
+            return []
         }
         let url = URL(fileURLWithPath: path)
         do {
             let json = try Data(contentsOf: url)
-            books = try JSONDecoder().decode([BookViewModel].self, from: json)
+            books = try JSONDecoder().decode([Book].self, from: json)
             return books
         } catch {
             print("Decoding failed, error: \(error.localizedDescription)")
-            return nil
+            return []
         }
-        return nil
+        return []
     }
 }

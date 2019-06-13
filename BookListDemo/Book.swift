@@ -9,10 +9,10 @@
 import UIKit
 import SwiftUI
 
-struct BookViewModel: Codable, Comparable, Identifiable {
+struct Book: Codable, Comparable, Identifiable {
     
     //to make sortable
-    static func <(lhs: BookViewModel, rhs: BookViewModel) -> Bool {
+    static func <(lhs: Book, rhs: Book) -> Bool {
         guard let lhsBookTitle = lhs.bookTitle, let rhsBookTitle = rhs.bookTitle else {
             return false
         }
