@@ -11,22 +11,25 @@ import SwiftUI
 struct BookList : View {
     
     @State var books: [BookViewModel]?
+    @State var isLoading: Bool = false
     
     var body: some View {
         NavigationView {
+            if !isLoading {
             List(books ?? []) { book in
                 Text(book.bookTitle ?? "no title")
-                
             }
             .navigationBarTitle(Text("Books"))
-                .navigationBarItems(trailing: Button(action: loadData) {
+                .navigationBarItems(
+                    leading: Button(action: {
+                        self.books = []
+                    }) {
+                        Text("Clear")
+                    },
+                    trailing: Button(action: loadData) {
                     Text("Load")
-            })
-                .navigationBarItems(leading: Button(action: {
-                    self.books = []
-                }) {
-                    Text("Clear")
                 })
+            }
         }
     }
     
