@@ -1,0 +1,61 @@
+[
+    {
+        "author": "Jason Morris",
+        "categories": "interface, ui, android",
+        "id": 1,
+        "lastCheckedOut": null,
+        "lastCheckedOutBy": null,
+        "title": "User Interface Development: Beginner's Guide",
+        "url": "/books/1/"
+    },
+    {
+        "author": "Joe Conway and Aaron Hillegass",
+        "categories": "big nerd ranch, ios",
+        "id": 4,
+        "lastCheckedOut": null,
+        "lastCheckedOutBy": null,
+        "publisher": "Big Nerd Ranch",
+        "title": "iOS Programming: The Big Nerd Ranch Guide",
+        "url": "/books/4/"
+    },
+    {
+        "author": "Erica Sadun",
+        "categories": "ios",
+        "id": 5,
+        "lastCheckedOut": null,
+        "lastCheckedOutBy": null,
+        "publisher": null,
+        "title": "The Core iOS 6 Developer's Cookbook",
+        "url": "/books/5/"
+    },
+    {
+        "author": "Jeff LaMarche and Dave Mark",
+        "categories": "ios,beginner",
+        "id": 6,
+        "lastCheckedOut": null,
+        "lastCheckedOutBy": null,
+        "publisher": "Apress",
+        "title": "Beginning iPhone Development",
+        "url": "/books/6/"
+    },
+    {
+        "author": "Zigurd Mednieks, Laird Dornin, G. Blake Meike, Masumi Nakamura",
+        "categories": "android",
+        "id": 2,
+        "lastCheckedOut": null,
+        "lastCheckedOutBy": null,
+        "publisher": "O'Reilly Media",
+        "title": "Programming Android",
+        "url": "/books/2/"
+    },
+    {
+        "author": "Reto Meier",
+        "categories": "android,professional",
+        "id": 3,
+        "lastCheckedOut": null,
+        "lastCheckedOutBy": null,
+        "publisher": "Wrox",
+        "title": "Android 4 Application Development",
+        "url": "/books/3/"
+    }
+]
