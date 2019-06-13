@@ -15,6 +15,7 @@ struct BookList : View {
     
     var body: some View {
         NavigationView {
+            if !isLoading {
             List(books) { book in
                 Text(book.bookTitle ?? "no title")
             }
