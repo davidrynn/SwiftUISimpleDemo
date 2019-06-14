@@ -14,25 +14,30 @@ struct BookList : View {
     @State var isLoading: Bool = false
     
     var body: some View {
-        NavigationView {
-            if !isLoading {
-            List(books) { book in
-                Text(book.bookTitle ?? "no title")
-            }
-            .navigationBarTitle(Text("Books"))
-                .navigationBarItems(
-                    leading:
-                        Button(action: {
-                            self.books = []
-                        }) {
-                            Text("Clear")
-                        },
-                    trailing:
-                        Button(action: loadData) {
-                            Text("Load")
+        VStack {
+        LoadingView(isShowing: $isLoading) {
+            NavigationView {
+                List(self.books) { book in
+                    Text(book.bookTitle ?? "no title")
+                }
+                .navigationBarTitle(Text("Books"))
+                    .navigationBarItems(
+                        leading:
+                            Button(action: {
+                                self.books = []
+                            }) {
+                                Text("Clear")
+                            },
+                        trailing:
+                        VStack {
+                            Button(action: self.loadData) {
+                                Text("Load")
+                            }
                         }
-                )
+                    )
             }
+        }
+            Button(action: { self.isLoading.toggle() }) { Text("Toggle Wait") }
         }
     }
     
